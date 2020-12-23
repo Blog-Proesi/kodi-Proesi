@@ -220,7 +220,7 @@ Levando o lazer e o prazer para vocÃªs assistir e curtir cada momento com a fa
 
 <addon id="slyguy.disney.plus" name="Disney+" provider-name="Slyguy" version="0.5.3">
   <requires>
-    <import addon="script.module.slyguy"/>
+    <import addon=/"script.module.slyguy"/>
   </requires>
   <extension point="xbmc.python.pluginsource" library="default.py" provides="video">
     <provides>video</provides>
