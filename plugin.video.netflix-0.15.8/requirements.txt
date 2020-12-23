@@ -1,9 +1,0 @@
-codecov
-kodi-addon-checker
-polib
-pycrypto==2.6.1
-pycryptodomex==3.4.5
-pydes==2.0.1
-pylint==1.6.5
-requests==2.12.4
-tox-travis
