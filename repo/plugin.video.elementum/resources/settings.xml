@@ -6,6 +6,7 @@
         <setting id="greeting_enabled" label="30587" type="bool" default="true" />
         <setting id="preload_timeout" label="30602" type="slider" option="int" range="1,1,120" default="1" />
         <setting id="binary_platform" label="30611" type="select" values="Auto|android_arm|android_arm64|android_x86|android_x64|linux_armv6|linux_armv7|linux_arm64|linux_x86|linux_x64|darwin_x86|darwin_x64|windows_x86|windows_x64" default="Auto" />
+        <setting type="action" label="30620" option="close" action="RunPlugin(plugin://plugin.video.elementum/restart/)" />
 
         <!-- Storage -->
         <setting label="30327" type="lsep" />
@@ -135,6 +136,7 @@
         <setting id="use_fanart_tv" label="30491" type="bool" default="false" />
         <setting id="seasons_all" label="30567" type="bool" default="true" />
         <setting id="seasons_order" label="30568" type="enum" lvalues="30569|30570" default="0" />
+        <setting id="seasons_specials" label="30639" type="bool" default="true" />
 
         <setting id="viewmode_movies" label="30034" type="number" default="" />
         <setting id="viewmode_tvshows" label="30035" type="number" default="" />
@@ -188,7 +190,7 @@
         <setting id="listen_autodetect_port" label="30371" type="bool" default="true" />
         <setting id="listen_port_min" label="30006" type="number" default="6891" enable="eq(-1,false)" />
         <setting id="listen_port_max" label="30007" type="number" default="6899" enable="eq(-2,false)" />
-        <setting id="magnet_resolve_timeout" label="30610" type="slider" option="int" range="1,1,600" default="20" />
+        <setting id="magnet_resolve_timeout" label="30610" type="slider" option="int" range="1,1,600" default="40" />
 
         <setting label="30327" type="lsep" />
         <setting type="text" label="30598" enable="false" />
@@ -246,15 +248,13 @@
     <!-- Proxy -->
     <category label="30008">
     <setting label="30490" type="lsep" />
-        <setting id="internal_dns_enabled" label="30495" type="bool" default="true" />
+        <setting id="internal_dns_enabled" label="30495" type="bool" default="false" />
         <setting id="internal_dns_help" label="30496" type="text" enable="false" />
         <setting id="internal_dns_skip_ipv6" label="30536" type="bool" default="true" />
 
-        <setting id="internal_proxy_enabled" label="30487" type="bool" default="true" />
+        <setting id="internal_proxy_enabled" label="30487" type="bool" default="false" />
         <setting id="internal_proxy_logging" label="30489" type="bool" default="false" />
         <setting id="internal_proxy_logging_body" label="30572" type="bool" default="false" />
-
-        <setting id="antizapret_enabled" label="30497" type="bool" default="false" />
 
         <setting label="30008" type="lsep" />
         <setting id="proxy_enabled" label="30010" type="bool" default="false" />
@@ -298,15 +298,16 @@
         <setting type="action" label="30330" action="RunPlugin(plugin://plugin.video.elementum/trakt/update)" />
         <setting id="trakt_refresh_token" type="text" label="Trakt refresh token" default="" visible="false" />
         <setting id="trakt_token_expiry" type="number" label="Trakt token expiry" default="0" visible="false" />
-        <setting id="trakt_client_id" type="text" label="30580" default="" />
-        <setting id="trakt_client_secret" type="text" label="30581" default="" />
+        
+        <!-- Trakt guys have asked to remove Custom API keys, so, please, stick with default keys -->
+        <!-- <setting id="trakt_client_id" type="text" label="30580" default="" visible="false" />
+        <setting id="trakt_client_secret" type="text" label="30581" default="" visible="false" /> -->
 
         <setting label="30362" type="lsep" />
         <setting id="trakt_sync_collections" type="bool" label="30363" default="true" />
         <setting id="trakt_sync_watchlist" type="bool" label="30364" default="true" />
         <setting id="trakt_sync_userlists" type="bool" label="30365" default="true" />
         <setting id="trakt_sync_watched" type="bool" label="30366" default="true" />
-        <setting id="trakt_sync_watched_single" type="bool" label="30584" default="false" />
         <setting id="trakt_sync_watchedback" type="bool" label="30367" default="true" />
         <setting id="trakt_sync_playback_progress" type="bool" label="30565" default="true" />
         <setting id="trakt_sync_hidden" type="bool" label="30564" default="true" />
@@ -371,7 +372,7 @@
         <setting label="30455" type="lsep" />
         <setting type="action" label="30453" action="RunPlugin(plugin://plugin.video.elementum/cmd/paste/bundle)" />
         <setting type="action" label="30456" action="RunPlugin(plugin://plugin.video.elementum/cmd/paste/all)" />
-        <setting id="logger_silent" type="bool" label="30407" default="false" />
+        <setting id="log_level" type="enum" label="30634" lvalues="30635|30636|30637|30638" default="2" />
 
         <!-- TMDB -->
         <setting label="30039" type="lsep" />

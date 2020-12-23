@@ -5,7 +5,39 @@
 [B][COLOR red]Development of *plugin.video.elementum* is stopped! [/COLOR][/B]
     - Do not expect any support, help and other things like that.
     - Source is open, so you can fork everything.
-    - Some bug fixes or updates can come, to keep things working and have the latest versions.
+    - Some bug fixes or updates can come, to keep things working and have the latest versions.    
+
+[B][COLOR red]0.1.63[/COLOR][/B]
+    - Added initial integration with UpNext addon to notify about next episode/file.
+    - Reorganized Arts collection from Fanart.tv, to make it faster and properly selected.
+    - Added photos for Cast members.
+    - Removed CloudFlare bypass from internal proxy (not working with the latest CloudFlare defence), Antizapret (also not working, use external solutions like VPN).
+    - Fixed issue with downloading to files from context menu.
+    - Added notification of completed background download.
+    - Added context item to return to Movies/Shows page from listings (to easily return back).
+    - Modified episode matching patterns to match '501' like files.
+    - Added 'Restart addon' option to addon settings, that restart the backend server totally and forces a start, if it is not started.
+    - Modified Lockfile functionality to set wider file rights to allow modifications by virtual users.
+    - Changed Percentage output for memory torrents to show percentage from current download queue properly.
+    - Added localization to torrent status.
+    - Added information about auto-close period in yes/no dialogs.
+    - Fixed issue with broken language detection (for example, with Portuguese Bralizian).
+    - Added settings for controlling Log level from addon settings.
+    - Fixed issue with showing total size of torrent on /web page, instead of selected files size.
+
+[B][COLOR red]0.1.60-62[/COLOR][/B]
+    - Please, visit https://github.com/elgatito/plugin.video.elementum/issues/636 for information about Trakt in Elementum.
+    - Added a check for Locked Trakt account, will show once a day, see the link above.
+    - Removed custom Trakt ClientID settings, see the link above.
+    - Removed feature to remove duplicates in Trakt history.
+    - New Trakt ClientID added (re-activation needed!), more changes to Watched Sync.
+    - Kodi 19 fixes. Thanks to @vlmaksime.
+
+[B][COLOR red]0.1.59[/COLOR][/B]
+    - Updated Python3 compatibility for Kodi19. Thanks to @vlmaksime.
+    - Changed default Trakt client id.
+    - Different critical fixes.
+    - Updated dependencies versions.
 
 [B][COLOR red]0.1.57-0.1.58[/COLOR][/B]
     - Added functionality to allow using both memory and file storages. Running 'Download' from context menu will download with file storage.
